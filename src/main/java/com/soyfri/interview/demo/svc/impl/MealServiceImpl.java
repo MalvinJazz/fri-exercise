@@ -18,9 +18,9 @@ public class MealServiceImpl implements MealService {
 	private MealRepository repository;
 	
 	@Override
-	public Collection<MealDto> findMeals(int size) {
+	public Collection<MealDto> findMeals(int size, String user) {
 		
-		Collection<Meal> meals = repository.getMeals(size);
+		Collection<Meal> meals = repository.getMeals(size, user);
 		
 		return meals.stream().map(m -> new MealDto(
 				m.getIdMeal(),

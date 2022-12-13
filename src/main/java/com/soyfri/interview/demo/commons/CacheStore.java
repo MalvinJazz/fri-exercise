@@ -3,8 +3,6 @@ package com.soyfri.interview.demo.commons;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
 
-import org.springframework.stereotype.Component;
-
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 

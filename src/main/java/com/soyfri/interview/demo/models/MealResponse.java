@@ -1,6 +1,7 @@
 package com.soyfri.interview.demo.models;
 
 import java.io.Serializable;
+import java.util.stream.Stream;
 
 public class MealResponse implements Serializable {
 
@@ -22,6 +23,12 @@ public class MealResponse implements Serializable {
 
 	public void setMeals(Meal[] meals) {
 		this.meals = meals;
+	}
+	
+	public Meal getMeal() {
+		
+		return Stream.of(this.meals).findAny().get();
+		
 	}
 	
 }

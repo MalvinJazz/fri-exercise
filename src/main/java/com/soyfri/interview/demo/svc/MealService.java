@@ -6,6 +6,6 @@ import com.soyfri.interview.demo.models.dto.MealDto;
 
 public interface MealService {
 
-	public Collection<MealDto> findMeals(int size);
+	public Collection<MealDto> findMeals(int size, String user);
 	
 }

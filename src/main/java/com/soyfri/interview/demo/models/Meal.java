@@ -2,6 +2,9 @@ package com.soyfri.interview.demo.models;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown=true)
 public class Meal implements Serializable {
 	
 	private static final long serialVersionUID = -1133750889056300128L;

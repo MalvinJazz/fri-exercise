@@ -11,6 +11,7 @@ public class Page<T> implements Serializable {
 	private int currentPage;
 	private int nextPage;
 	private int previousPage;
+	private String currentUser;
 	private Collection<T> resultSet;
 	
 	public Page() {
@@ -38,7 +39,7 @@ public class Page<T> implements Serializable {
 	}
 
 	public void setNextPage(int nextPage) {
-		this.nextPage = nextPage;
+		this.nextPage = nextPage + 1;
 	}
 
 	public int getPreviousPage() {
@@ -46,7 +47,8 @@ public class Page<T> implements Serializable {
 	}
 
 	public void setPreviousPage(int previousPage) {
-		this.previousPage = previousPage;
+		previousPage--;
+		this.previousPage = previousPage < 0 ? 0 : previousPage;
 	}
 
 	public Collection<T> getResultSet() {
@@ -55,6 +57,14 @@ public class Page<T> implements Serializable {
 
 	public void setResultSet(Collection<T> resultSet) {
 		this.resultSet = resultSet;
+	}
+
+	public String getCurrentUser() {
+		return currentUser;
+	}
+
+	public void setCurrentUser(String currentUser) {
+		this.currentUser = currentUser;
 	}
 	
 }
